@@ -21,16 +21,15 @@ This is a sample react project showing some examples of state Toggle, customComp
 
 Users should be able to:
 
-- Add friends to the friends list without mutating the original array
-- get a random id with crypto.randomUUID() method
-- conditionally render the addFriend Form
-- conditionally render the split the bill component when a friend is selected
-- calculate who owe's who based on the selected friend and who is paying
-- update the friends list based on the submitted calculations
+- search and see the selected movies list
+- select a movie from the list, rate it, and add it to the watched list. (prevent duplicate adds to the watched list)
+- see an updated page title based on the selected movie
+- CRUD functionality for the watched movies list
+- calculate the averages for the watched summary
 
 ### Screenshot
 
-![](/src/images/)
+![](public/Screen%20Shot%202024-07-25%20at%2017.57.00.png)
 
 ### Links
 
@@ -47,16 +46,18 @@ Users should be able to:
 
 ### What I learned
 
-1. learned to create a static project first before adding state for dynamic rendering
-2. how to split a function into its own component using refactor
-3. Prop drilling and Lifting start properly as to avoid unnecessary and excessive drilling.
-4. custom components are a blank slate and properties like onClick that come prepackaged need to be sent in as properties
-5. using spread operator instead of mutating original array
-6. direct state toggle vs functional update. Functional update is better when new state is derived from old state
-7. making a form, updating state, binding inputs to state variables, using a guard clause for falsy input values
-8. using numeric values in input fields, formatting against non-numeric values, adding dollar sign inside input fields
-9. creating a better user experience with form validation and error messages
-10. Using the same button as a toggler and using optional chaining to prevent throwing an error when selection is null
+1. component composition using the children prop to avoid unnecessary prop drilling. This is also very useful for creating flexible components
+2. Default value for props
+3. type checking / using propTypes to prevent incorrect input values
+4. Handling a hover event with onMouseIn and OnMouseOut. Used to create a star rating system
+5. Using Array.from() to create a star rating system based on rating values.
+6. useEffect, fetching data, error handling, isLoading, try/catch/finally and conditional rendering from error and loading states.
+7. created a .env file. Make sure to restart the server after or it would be able to find the apiKey inside the file
+8. cleanup function for a useEffect. Runs before the effect is executed again and after the component is unmounted. Needed if the side effect keeps happening after the component is unmounted or re-rendered.
+9. learned to use the abort controller to minimize the amount of memory required to render the component when fetching data
+10. attach event listener to entire document to listen for escape key.
+11. used local storage to store the watched movies so that the list persists after resetting the browser. This showcased the use of an initialization function in the useState hook to set up the initial state based on some computation or fetching from storage. This is also called lazy evaluation
+12. autoFocus using the useRef hook to select a dom element
 
 ### Continued development
 
