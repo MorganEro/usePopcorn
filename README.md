@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/MorganEro/usePopcorn)
-- Live Site URL: (morganero.github.io/usePopcorn/)
+- Live Site URL: (https://morganero.github.io/usePopcorn/)
 
 ### Built with
 
